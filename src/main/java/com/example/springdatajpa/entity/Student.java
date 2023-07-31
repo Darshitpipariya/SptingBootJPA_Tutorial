@@ -39,6 +39,10 @@ public class Student {
     private String mobile;
     @Embedded
     private Guardian guardian;
+    @ManyToMany(
+            mappedBy = "studentList"
+    )
+    private List<Course> courseList;
 
 
 }
